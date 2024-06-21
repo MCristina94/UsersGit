@@ -1,18 +1,25 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const LoginForm = () => {
+const LoginForm = ({login}) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+      if(username === 'admin' && password==='1234'){
+        login();
+      }else{
+        alert('Incorrect Credentials')
+      }
     }
 
 
   return (
     <div>
       <form
+        onSubmit={handleSubmit}
         style={{
           display: "flex",
           flexDirection: "column",
@@ -26,6 +33,8 @@ const LoginForm = () => {
             <input
               type="text"
               placeholder="Enter your username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               style={{ width: "100px" }}
             />
           </div>
@@ -34,6 +43,8 @@ const LoginForm = () => {
             <input
               type="password"
               placeholder="Enter your pass"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               style={{ width: "100px" }}
             />
           </div>

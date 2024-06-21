@@ -1,0 +1,28 @@
+.tittle{
+    text-decoration: none;
+    color:#6d7681;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.tittle:hover{
+    color: #4493f8;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin: 2%;
+}
+
+.logo{
+    width: 5%;
+    margin-top: 5%;
+    border-radius: 50%;
+}
+
+.bg{
+    width: 100%;
+    background: rgb(14,17,23);
+background: linear-gradient(0deg, rgba(14,17,23,1) 18%, rgba(17,20,26,1) 53%, rgba(24,33,50,1) 100%);
+}

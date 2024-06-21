@@ -1,0 +1,11 @@
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.tittle{
+    color: #4493f8;
+    margin-top: 5%;
+}
